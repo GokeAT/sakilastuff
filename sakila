@@ -45,4 +45,9 @@ SHOW tables;
     
     16.) SELECT AVG (length) from film_category film_id JOIN film film_id on film_Category.film_id=film.film_id;
     
-    17.) 
+    17.) SELECT title FROM film WHERE description LIKE '%robot%';
+    
+    18.) SELECT count(release_year) FROM film WHERE release_year=2010;
+    
+    19.) SELECT title FROM film_list WHERE category = "Horror";
+    
