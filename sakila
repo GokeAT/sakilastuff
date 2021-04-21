@@ -1,0 +1,48 @@
+USE sakila;
+SHOW tables;
+
+1.) SELECT  * FROM actor;
+
+2.)SELECT last_name FROM actor WHERE first_name = "John";
+
+3.) SELECT * FROM actor WHERE last_name = "Neeson";
+
+4.) SELECT * FROM actor where actor_id%10 = 0;
+
+5.) select description FROM film WHERE film_id = 100;
+
+6.) select * from film where rating = "R";
+
+7.) select * from film where rating != "R";
+
+8.) SELECT * FROM film order by length limit 10;
+
+9.) SELECT * FROM film order by length desc;
+
+10.) SELECT * FROM film where special_features = "Deleted Scenes";
+
+11.) SELECT COUNT(last_name)
+    FROM (
+    SELECT last_name
+    FROM actor
+    GROUP BY last_name
+    HAVING COUNT(*) = 1
+    ) AS ONLY_ONCE
+  
+  12.) SELECT COUNT(last_name)
+    FROM (
+    SELECT last_name
+    FROM actor
+    GROUP BY count (last_name)
+    HAVING COUNT(*) > 1
+    ) AS more_than_once
+    
+    13.) SELECT first_name, last_name from actor_info ORDER by film_info desc;
+    
+    14.) 
+    
+    15.) SELECT AVG(length) from film;
+    
+    16.) SELECT AVG (length) from film_category film_id JOIN film film_id on film_Category.film_id=film.film_id;
+    
+    17.) 
